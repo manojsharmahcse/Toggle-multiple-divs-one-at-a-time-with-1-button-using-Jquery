@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+  .hide{ display: none; }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+  $(".click-btn").click(function(){
+      var fid = $(".hide:first").prop("id");
+      $("#"+fid).removeClass("hide");  
+  });
+
+  $(".remove-tag").click(function(){
+     $(this).parent().addClass("hide");
+
+  });
+
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<div id="cart-1" class="hide">
+    <div class="remove-tag">x</div>
+    <h5>1</h5>  
+</div>
+
+<div id="cart-2" class="hide">
+    <div class="remove-tag">x</div>
+    <h5>2</h5>  
+</div>
+
+<div id="cart-3" class="hide">
+    <div class="remove-tag">x</div>
+    <h5>3</h5>  
+</div>
+
+<div id="cart-4" class="hide">
+    <div class="remove-tag">x</div>
+    <h5>4</h5>  
+</div>
+
+<div id="cart-5" class="hide">
+    <div class="remove-tag">x</div>
+    <h5>5</h5>  
+</div>
+
+
+
+
+<button class="click-btn">click</button>
+
+
+
+</body>
+
+</html>
